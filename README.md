@@ -3,7 +3,7 @@
 
 Copyright (c) 2013 [Sebastien Varrette](mailto:<Sebastien.Varrette@uni.lu>) [www](http://varrette.gforge.uni.lu)
 
-        Time-stamp: <Mer 2013-08-21 14:14 svarrette>
+        Time-stamp: <Mer 2013-08-21 14:32 svarrette>
 
 --------------------
 # afr-latex-template
@@ -45,9 +45,16 @@ To initialize completely your local copy of this repo (assuming your SSH key is
 correctly configured on the Gforge): 
 
       $> git clone  https://github.com/Falkor/fnr-latex-template.git
-      $> cd 
+      $> cd fnr-latex-template
       $> make setup
 
 # AFR Postdoc proposal
 
 The full AFR Postdoc proposal is available under `AFR/Postdoc/`
+
+
+# Contributing
+
+Help me to complete the (missing) LaTeX templates by Forking this repository,
+complete it (if possible under the same model) and pulling requests. 
+
