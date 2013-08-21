@@ -1,0 +1,109 @@
+% =============================================================================
+% File:  _style.sty --  LaTeX style configuration for the document
+% Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% 
+% Copyright (c) 2010 Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% http://varrette.gforge.uni.lu
+% $Id: _style.sty 210 2012-05-30 22:52:26Z svarrette $
+% =============================================================================
+
+% --- Insertion de paquetages ---
+\usepackage{ae,a4,url}
+\usepackage{epsfig}
+% \usepackage{amsmath, amsthm}
+\usepackage{amsfonts,amssymb} % permet la definition des ensembles
+\usepackage{algorithm2e}
+\usepackage{listings}
+%\usepackage[printonlyused]{acronym}
+\usepackage{acronym}
+\usepackage{eurosym}
+\usepackage{multirow}
+
+\usepackage{colortbl}
+\usepackage{float}
+\definecolor{lightgray}{gray}{0.9}
+
+\usepackage{pdfpages}
+
+%\usepackage[usenames]{color}
+\definecolor{bcode}{rgb}{0.91,0.91,0.91}  % color for code extract
+
+% \usepackage[colorlinks=true]{hyperref}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[plainpages=false,pdftex]{hyperref} %these
+% options may be necessary for pdflatex
+\else
+\usepackage[plainpages=false]{hyperref}
+\usepackage{breakurl}
+\fi
+\hypersetup{
+  colorlinks,
+  linkcolor=red,
+  citecolor=blue,
+  breaklinks,
+  linktocpage,
+  bookmarksopen,
+  bookmarksopenlevel=1,
+  bookmarksnumbered}
+
+%%%%%%%%%%%%%%%%% Environnements pour les prototypes de fonction %%%%%%%%%%%%%%%%%
+% --- Style de base pour lstlisting ---
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=3,firstnumber=1,language=C++,basicstyle=\small,columns=flexible,backgroundcolor=\color{bcode},showstringspaces=false,emph={foreach,in,uint8_t,uint16_t,uint32_t,size_t,sig_atomic_t,time_t,clock_t,sigset_t,restrict},emphstyle=\bfseries,escapeinside={/*@}{@*/}}
+
+% Style bibliographique
+\bibliographystyle{plain}
+
+% --- Definitions de nouvelles commandes ---
+% les ensembles
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fp}{\mathbb{F}_p}
+
+\newcommand{\setitemsep}{\setlength\itemsep{-0.5em}}
+
+
+%%%% \isodayandtime to obtain current date and time
+\begingroup
+\count0=\time \divide\count0by60 % Hour
+\count2=\count0 \multiply\count2by-60 \advance\count2by\time% Min
+\def\2#1{\ifnum#1<10 0\fi\the#1}
+\xdef\isodayandtime{\the\year-\2\month-\2\day\space\2{\count0}:%sec
+  \2{\count2}}
+\endgroup
+
+\usepackage[displaymath, tightpage]{preview}
+\usepackage{xspace}
+
+% TODO
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\TODO}[2][]{\todo[inline,color=blue!10,size=\footnotesize,#1]{\textbf{TODO}: #2}}
+\newcommand{\todoSeb}[2][]{\todo[inline, author=Seb, color=blue!50, #1]{#2}}
+\newcommand{\todoJoseph}[2][]{\todo[inline, author=Joseph, color=yellow!50, #1]{#2}}
+\newcommand{\todoAll}[1]{\todo[inline, author=ALL]{#1}}
+
+
+% Current version of the proposal
+\IfFileExists{VERSION}{
+  \def\docversion{\input{VERSION}}
+}{
+  \def\docversion{0.2}
+}
+
+% Define the project acronym here
+\newcommand{\project}{\textsc{MyProject}\xspace}
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% eof
+% 
+% Local Variables:
+% mode: latex
+% mode: flyspell
+% End:
