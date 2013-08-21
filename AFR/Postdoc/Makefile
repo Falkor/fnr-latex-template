@@ -10,14 +10,19 @@
 #          Web page : http://varrette.gforge.uni.lu
 #
 
-SRC_DIR      = src
-PROJECT_DESC = $(SRC_DIR)/_7_1_project_description
+SRC_DIR       = src
+PROJECT_DESC  = $(SRC_DIR)/project_description
+LETTER_INTENT = $(SRC_DIR)/personal_statement
+
+
 MAIN_TEX     = $(shell grep -l "[\]begin{document}" $(SRC_DIR)/*.tex | xargs echo)
 PDF          = $(MAIN_TEX:%.tex=%.pdf)
 
 all:
 	@echo "=> compiling project description in '$(PROJECT_DESC)"
 	$(MAKE) -C $(PROJECT_DESC)
+	@echo "=> compiling letter of intent in '$(LETTER_INTENT)"
+	$(MAKE) -C $(LETTER_INTENT)
 	@echo "=> generating full proposal"
 	$(MAKE) -C $(SRC_DIR)
 	@echo
@@ -25,5 +30,6 @@ all:
 	@echo 
 
 %:
-	$(MAKE) -C $(PROJECT_DESC) $@
-	$(MAKE) -C $(SRC_DIR)      $@
+	$(MAKE) -C $(PROJECT_DESC)  $@
+	$(MAKE) -C $(LETTER_INTENT) $@
+	$(MAKE) -C $(SRC_DIR)       $@

@@ -69,22 +69,34 @@
 %--------------------------------------------------------------
 \subsection{Project Description (max 12 pages)}
 
-\IfFileExists {_7_1_project_description/project_description.pdf}{
-  \includepdf[pages={-}]{_7_1_project_description/project_description.pdf}
+\IfFileExists{project_description/project_description.pdf}{
+  \includepdf[pages={-}]{project_description/project_description.pdf}
 }
 
 %--------------------------------------------------------------
 \subsection{Training Plan (max 4 pages)}
-
+\IfFileExists{training_plan/training_plan.pdf}{
+  \includepdf[pages={-}]{training_plan/training_plan.pdf}
+}
 
 %--------------------------------------------------------------
 \subsection{Personal Statement (max 1 page)}
+\IfFileExists{personal_statement/personal_statement.pdf}
+  \includepdf[pages={-}]{personal_statement/personal_statement.pdf}
+}
+
+%--------------------------------------------------------------
+\subsection{Researchers CVs (max 3 pages per CV)}
+
+% Adapt accordingly
+\IfFileExists {CVs/cv1.pdf}{\includepdf[pages={-}]{_7_4_CVs/cv1.pdf}}
+\IfFileExists {CVs/cv2.pdf}{\includepdf[pages={-}]{_7_4_CVs/cv2.pdf}}
+\IfFileExists {CVs/cv3.pdf}{\includepdf[pages={-}]{_7_4_CVs/cv3.pdf}}
+% etc....
 
 
 %--------------------------------------------------------------
-\subsection{Researchers CV}
-
-
+\subsection{Copies of Degree Certificates / Diplomas and Passport}
 
 
 
