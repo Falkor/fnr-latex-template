@@ -94,6 +94,13 @@
   \def\docversion{0.2}
 }
 
+% Macro to facilitate attachment management
+\newcommand{\Attachment}[1]{
+  \IfFileExists {#1}{\includepdf[pages={-}]{#1}}
+}
+
+
+
 % Define the project acronym here
 \newcommand{\project}{\textsc{MyProject}\xspace}
 
