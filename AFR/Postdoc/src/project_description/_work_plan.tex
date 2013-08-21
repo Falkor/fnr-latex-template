@@ -8,13 +8,48 @@
 % =============================================================================
 
 \emph{Explanation: Describe the different \textbf{stages of activities} (i.e. work
-packages, milestones) with the corresponding timetable (when?), location
-(where?) and collaborating research groups (with whom?), preferably in
-spreadsheet format.
-The work plan must typically be limited to a period of 2 years.
-} 
+  packages, milestones) with the corresponding timetable (when?), location
+  (where?) and collaborating research groups (with whom?), preferably in
+  spreadsheet format.
+  The work plan must typically be limited to a period of 2 years.
+}
 
 
+
+Example of Gantt Chart using \texttt{gantt.sty}\footnote{Credits: Benoit
+  Bertholon \url{Benoit.Bertholon@uni.lu}.}
+
+\begin{figure}[H]
+    \hspace{-5em}
+    \begin{gantt}{7}{12}
+        \begin{ganttitle}
+            \titleelement{Jan}{1}
+            \titleelement{Feb}{1}
+            \titleelement{Mar}{1}
+            \titleelement{Apr}{1}
+            \titleelement{May}{1}
+            \titleelement{Jun}{1}
+            \titleelement{Jul}{1}
+            \titleelement{Aug}{1}
+            \titleelement{Sep}{1}
+            \titleelement{Oct}{1}
+            \titleelement{Nov}{1}
+            \titleelement{Dec}{1}
+        \end{ganttitle}
+        \ganttbar{implementation, xp}{0}{7}
+        \ganttbar{article writing}{0}{8}
+        \ganttbar{conference}{3}{3}
+
+        % \ganttbarcon{a consecutive task}{2}{4}
+        % \ganttbarcon{another consecutive task}{8}{2}
+        \ganttbar{literature}{6}{6}
+        \ganttbar{design}{7}{5}
+        \ganttbar{implementation}{8}{4}
+    \end{gantt}
+    \caption{Gantt Chart Example over 1 year}
+    \label{fig:timeline}
+
+\end{figure}
 
 
 

@@ -81,353 +81,37 @@
 
 %--------------------------------------------------------------
 \subsection{Personal Statement (max 1 page)}
-\IfFileExists{personal_statement/personal_statement.pdf}
+\IfFileExists{personal_statement/personal_statement.pdf}{
   \includepdf[pages={-}]{personal_statement/personal_statement.pdf}
 }
 
 %--------------------------------------------------------------
 \subsection{Researchers CVs (max 3 pages per CV)}
 
-% Adapt accordingly
-\IfFileExists {CVs/cv1.pdf}{\includepdf[pages={-}]{_7_4_CVs/cv1.pdf}}
-\IfFileExists {CVs/cv2.pdf}{\includepdf[pages={-}]{_7_4_CVs/cv2.pdf}}
-\IfFileExists {CVs/cv3.pdf}{\includepdf[pages={-}]{_7_4_CVs/cv3.pdf}}
+% Adapt accordingly....
+\IfFileExists {CVs/cv1.pdf}{\includepdf[pages={-}]{CVs/cv1.pdf}}
+%\IfFileExists {CVs/cv2.pdf}{\includepdf[pages={-}]{CVs/cv2.pdf}}
+%\IfFileExists {CVs/cv3.pdf}{\includepdf[pages={-}]{CVs/cv3.pdf}}
 % etc....
 
 
 %--------------------------------------------------------------
 \subsection{Copies of Degree Certificates / Diplomas and Passport}
 
+% Adapt accordingly...
+\IfFileExists{Scans/certificate.pdf}{ \includepdf[pages={-}]{Scans/certificate.pdf}}
 
+%--------------------------------------------------------------
+\subsection{Framework of the Postdoc project: The Host Institution's and
+  collaborating Institution's research group(s) (max. 3 pages / research group)}
 
 
+%--------------------------------------------------------------
+\subsection{Supervisor(s) CV(s)}
 
+% Adapt accordingly....
+\IfFileExists {CVs/cv-supervisor.pdf}{\includepdf[pages={-}]{CVs/cv-supervisor.pdf}}
 
-\clearpage
-
-
-
-
-%================================
-\section*{Research Project}
-
-\begin{center}
-    \small
-    \begin{tabular}{|l|l|}
-        \hline
-        Project Title                & A New Secure Sky \\\hline
-        Project Acronym              & \project\\\hline
-        Project Start                & 01/01/2013 \\
-        Project Duration (in months) & 36 \\
-        Resubmission                 & No \\
-        Follow-up                    & No \\
-        \hline
-        Total project costs          & 2,394,321 \euro{} \\
-        Requested funds from FNR     & 908,219 \euro{} \\
-        Requested funds from NCBIR   & 767,974 \euro{} \\
-        \hline
-        Total effort (Person*Months) & 657 PM (including AFRs)\\\hline
-        Total effort Luxembourg side (PMs) & 295 PM (including AFRs)\\
-        Total effort Polish side (PMs)     & 362 PM \\
-        Total Effort to be Financed (by FNR and NCBIR) (PMs) & 545 PM\\\hline
-        Total effort financed by FNR (PMs)  & 183 PM \\
-        Total effort financed by NCBIR (PMs) & 362 PM \\\hline % 207+155
-        Total  PI effort (PMs) & 10 MM  \\\hline
-    \end{tabular}
-\end{center}
-
-% ---------------------------------------
-\paragraph{Research priority in FNR call.}
-
-IS -- Information Security and Trust Management.
-
-% -------------------
-\paragraph{Keywords.}
-
-Cloud Computing,
-Security, 
-Nature Inspired Computing,
-Robust Scheduling,
-Game Theory,
-Fault Tolerance, 
-Trust Management,
-Volunteer Computing
-
-
-% ---------------------------------------
-\paragraph{Publishable Project Summary.} 
-
-cf first part of the abstract (until "\emph{...  trusted environment for distributed executions over such a CC platform}")
-
-
-% % =================================================
-% \section*{Research Project consortium}
-
-% \begin{center}
-%     %\hspace*{-4em}
-%     \small
-%     \begin{tabular}{|c|p{0.5\textwidth}|l|l|}
-%         \hline
-%         \multicolumn{2}{|l|}{\textbf{Contracting partners}} & \textbf{Dept} & \textbf{Researcher responsible} \\\hline
-%         \hline
-%         1   & SnT (UL) & CSC  & Prof. Dr Pascal Bouvry \\
-%         & \url{http://csc.uni.lu} & &  \\\hline 
-%         \hline
-%         %\multicolumn{2}{|l|}{\textbf{Non Contracting partners}} & \textbf{Dept} & \textbf{Researcher responsible} \\\hline
-%         2   & Cardinal Stefan Wyszynski University in Warsaw (CSWU) & M\&NS  &
-%         Prof. Dr. Franciszek Seredynski \\
-%         & \url{http://www.uksw.edu.pl} & & \\\hline 
-%         3   & Warsaw University of Technology (WUT) & WEiTI, IT & 
-%         Prof. Dr. Zbigniew Kotulski\\
-%         & \url{http://eng.pw.edu.pl/} & & \\\hline
-%     \end{tabular}
-% \end{center}
-
-
-% \paragraph{Legal and ethical issues} No
-
-
-% % ==============================
-% \section*{Project Outputs}
-
-% % -----------------------
-% \paragraph{PhD Training}
-
-% \begin{center}
-%   \small\hspace*{-1em}
-%   \begin{tabular}{|p{0.15\textwidth}|p{0.4\textwidth}|p{0.2\textwidth}|p{0.17\textwidth}|}
-%     \hline
-%     \textbf{PhD Candidate} & \textbf{Title of thesis} & \textbf{Supervisor} & \textbf{Expected Award date}\\\hline
-%     \hline
-%     %%%%%%%%%%%%%%%
-%     UL-NN-PhD1 (UL/CSWU -- Joint PhD)
-%     & Novel cryptographic primitives for reliable and secure computations on
-%     hybrid Clouds
-%     & Prof. Dr. Franck Lepr\'evost and Prof. Dr. Franciszek Seredynski
-%     & Dec 2015 \\\hline
-%     %%%%%%%%%%%%%%%%
-%     Maciej Olewinski (WUT)
-%     & Secure access protocols in heterogeneous networks
-%     & Prof. Dr. Zbigniew Kotulski
-%     & Dec 2015 \\\hline
-%     %%%%%%%%%%%%%%%%
-%     Marcin Tunia (WUT)
-%     & Distributed platforms for social networks and virtualization in clouds
-%     &  Prof. Dr. Zbigniew Kotulski
-%     & Dec 2015 \\\hline
-%     %%%%%%%%%%%%%%%%
-%     WUT-NN-PhD1 (WUT)
-%     & Quality of Protection approach on clouds
-%     & Prof. Dr. Zbigniew Kotulski or Prof. Dr. Mieczyslaw Muraszkiewicz
-%     &  Dec 2015 \\\hline
-%     %%%%%%%%%%%%%%%% 
-%     CSWU-NN-PhD1 (CSWU)
-%     & \acf{CA} based security solutions for distributed computing 
-%     & Prof. Dr. Franciszek Seredynski
-%     &  Dec 2015 \\\hline
-%     %%%%%%%%%%%%%%%% 
-%     Jakub Gasior (CSWU)
-%     & Secure coalition-based computation in cloud computing systems
-%     & Prof. Dr. Franciszek Seredynski
-%     &  Dec 2014 \\\hline
-    
-%   \end{tabular}
-% \end{center}
-
-% % -----------------------
-% \paragraph{Scientific Peer Reviewed Publications.}
-
-% See section~\ref{5_3}
-
-% % -----------------------
-% \paragraph{Other Tangible Outputs.}
-
-% See section~\ref{5_3}
-
-% \section*{Financial Part}
-
-% cf budget sheet
-
-% %\section*{List of resources}
-% % Now moved to 6_2_List_of_human_resources.tex
-
-
-% \clearpage
-% \tableofcontents
-% \clearpage
-
-% % ==============================================
-% \section{Project abstract (max 1 page)}
-% % ==============================================
-% \input{1_project_abstract}
-
-
-% % =========================================================================================
-% \section{Accordance with POLLUX thematic research priorities (max 0.5 pages)}
-% % =========================================================================================
-% \input{2_accordance_POLLUX_thematic}
-
-
-% % =========================================================================================
-% \section{Definition of Proposed Research Project (max. 10 pages for 3.1-3.3)}
-% % =========================================================================================
-
-% % --------------------------------------------------------------------------
-% \subsection{Current state of the art including your relevant previous work}
-% \label{sec:3_1_state_of_the_art}
-% \input{3_1_state_of_the_art}
-
-% % ----------------------------------------------------------------------------
-% \subsection{Project objectives and contribution to knowledge development}
-% \input{3_2_project_objectives}
-
-% % ------------------------------------
-% \subsection{Methods and Approach}
-% \label{sec:3_3_methods_approach}
-% \input{3_3_methods_approach}
-
-
-% % =========================================================
-% \section{4. Description of the Project Plan and Work Packages}
-% % =========================================================
-
-% % ------------------------------------
-% \subsection{Project plan (1 page)}
-% \input{4_1_project_plan}
-
-% % ----------------------------------------------------------------------------
-% \subsection{4.2. Work Packages (WP) and tasks (1 page/WP)}
-% \input{WP1}
-% \input{WP2}
-% \input{WP3}
-% \input{WP4}
-% \input{WP5}
-% \input{WP6}
-
-% \clearpage
-% % -------------------------------------------------------------------
-% \subsection{Risk management and Quality-assurance (max 1 page)}
-% \input{4_3_risk_management}
-
-
-% % =========================================================
-% \section{Project outputs (max 3 pages for 5.1.-5.2.)}
-% % =========================================================
-
-% % ----------------------------------------------------------------------------------
-% \subsection{Contributions to advancement of knowledge, people and institutions}
-% \input{5_1_contributions}
-
-% % --------------------------------------------------------------------------------------
-% \subsection{Intended long term impact and contribution to FNR programme objectives}
-% \input{5_2_long_term_impact}
-
-% % --------------------------------------------------------------------------------------
-% \subsection{PhD Student supervision and research lines}
-% \label{5_3}
-% \input{5_3_phd_supervision}
-
-
-% % ================================================================================
-% \section{Project Participants and Management (max 2 pages for 6.1.-6.3.) }
-% % ================================================================================
-
-% % ------------------------------------------
-% \subsection{Description of the consortium}
-% \input{6_1_consortium}
-
-% % --------------------------------------------------
-% \subsection{List of total resources}
-% \input{6_2_List_of_human_resources}
-
-% % --------------------------------------------------
-% \subsection{Communication and decision-making}
-% \input{6_3_communication}
-
-% % --------------------------------------------------------------------------------------
-% \subsection{Consortium agreement and Intellectual Property Rights (IPR) management}
-% \label{sec:IPR}
-% \input{6_4_IPR}
-
-
-
-% % ================================================================================
-% \section{Justification of project budget and requested funding (2 pages)}
-% % ================================================================================
-% \input{7_justification_costs}
-
-% % ================================================================================
-% \section{Bibliography / References}
-% % ================================================================================
-% \bibliography{biblio,biblio-varrette,biblio-wut,biblio-cswu}
-% % ================================================================================
-% \section*{Acronyms used}
-% % ================================================================================
-
-% Acronyms
-\begin{acronym}\setlength\itemsep{-0.3em}
-    % Kindly put them in alphabetical order. 
-    \acro{ABFT}{Algorithm-Based Fault Tolerance}
-    \acro{CA}  {Cellular Automata}
-    \acro{CC}  {Cloud Computing}
-    \acro{CGA} {Cellular Genetic Algorithm}
-    \acro{CSWU}{Cardinal Stefan Wyszynski University in Warsaw}
-    \acro{dEA} {distributed Evolutionary Algorithm}
-    \acro{DGVCS}{Desktop Grids and Volunteer Computing System}
-    \acro{DoS}{Denial of Service}
-    \acro{EA}  {Evolutionary Algorithm}
-    \acro{FT}  {Fault Tolerance}
-    \acro{GA}  {Genetic Algorithm}
-    \acro{GC}  {Global Computing}
-    \acro{GP}  {Genetic Programming}
-    \acro{HI}  {Host Institution}
-    \acro{IaaS}{Infrastructure-as-a-Service}
-    \acro{IDS} {Intrusion Detection Service}
-    \acro{ITIL}{Information Technology Infrastructure Library}
-    \acro{LA}  {Learning Automata}
-    \acro{PaaS}{Platform-as-a-Service}
-    \acro{PWD} {PieceWise Deterministic Model}
-    \acro{QoP}  {Quality of Protection}
-    \acro{SaaS}{Software-as-a-Service}
-    \acro{SRI-PAS} {Systems Research Institute, Polish Academy of Sciences}
-    \acro{SnT}{Interdisciplinary center for Security, reliability and Trust of Luxembourg University}
-    \acro{TCG}{Trusted Computing Group}
-    \acro{TPM}{Trusted Platform Module}
-    \acro{UL}{University of Luxembourg}
-    \acro{UNSH}{University of Natural Sciences and Humanities in Siedlce}
-    \acro{VC} {Volunteer Computing}
-    \acro{VM}  {Virtual Machine}
-    %\acro{VOIP}{Voice-Over-IP}
-    \acro{WUT}{Warsaw University of Technology}
-
-    
-    % \acro{AIK} {Attestation identity key}
-    % \acro{CA} {Certificate Authority}
-    % \acro{CPU} {Central Process Unit}
-    % % \acro{DoS}{Denial of Service}
-    % % \acro{DDoS}{Distributed Denial of Service}
-    % \acro{EK} {Endorsement Key}
-    % \acro{HPC} {High Performance Computing}
-    % \acro{IaaS}{Infrastructure-as-a-Service}
-    % \acro{IRP}{Integrity Reporting Protocol}
-    % \acro{MITM} {Man In The Middle}
-    % \acro{NFS} {Network File System}
-    % \acro{OS} {Operating System}
-    % \acro{PaaS}{Platform-as-a-Service}
-    % \acro{PCC}{Proof Carrying Code}
-    % \acro{PCR} {Platform Configuration Register}
-    % \acro{RTR} {Root of Trust for Reporting}
-    % \acro{RTM} {Root of Trust for Measurement}
-    % \acro{RTS} {Root of Trust for Storage}
-    % \acro{SaaS}{Software-as-a-Service}
-    % \acro{SRK}{Storage Root Key}
-    % \acro{TC}{Trusted Computing}
-    % \acro{TCG}{Trusted Computing Group}
-    % \acro{TCRR}{TPM-based Certification of a Remote Resource}
-    % \acro{TPM}{Trusted Platform Module}
-    % \acro{VMI} {Virtual Machine Image}
-    % \acro{VM} {Virtual Machine}
-\end{acronym}
 
 
 

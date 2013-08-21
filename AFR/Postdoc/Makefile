@@ -12,6 +12,7 @@
 
 SRC_DIR       = src
 PROJECT_DESC  = $(SRC_DIR)/project_description
+TRAINING_PLAN = $(SRC_DIR)/training_plan
 LETTER_INTENT = $(SRC_DIR)/personal_statement
 
 
@@ -21,6 +22,8 @@ PDF          = $(MAIN_TEX:%.tex=%.pdf)
 all:
 	@echo "=> compiling project description in '$(PROJECT_DESC)"
 	$(MAKE) -C $(PROJECT_DESC)
+	@echo "=> compiling training plan in '$(TRAINING_PLAN)"
+	$(MAKE) -C $(TRAINING_PLAN)
 	@echo "=> compiling letter of intent in '$(LETTER_INTENT)"
 	$(MAKE) -C $(LETTER_INTENT)
 	@echo "=> generating full proposal"
@@ -31,5 +34,6 @@ all:
 
 %:
 	$(MAKE) -C $(PROJECT_DESC)  $@
+	$(MAKE) -C $(TRAINING_PLAN) $@
 	$(MAKE) -C $(LETTER_INTENT) $@
 	$(MAKE) -C $(SRC_DIR)       $@
