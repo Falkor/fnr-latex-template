@@ -1,0 +1,194 @@
+% ==============================================================================
+% File:  project_description.tex --  FNR INTER Call - CRIST-ERA
+% Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% Time-stamp: <Sam 2014-01-18 21:50 svarrette>
+% 
+% Copyright (c) 2013 Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% http://varrette.gforge.uni.lu
+% 
+% More information on LaTeX: http://www.latex-project.org/
+% LaTeX symbol list:
+% http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf
+% =============================================================================
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage{_style}
+\usepackage{gantt}
+
+% =================================== TITLE ===================================
+% \newlength{\larg}
+\title{
+  {\Large \textsc{FNR INTER Call -- CRIST-ERA Call}}\\
+  Detailed project information
+}
+\author{}
+\date{\textbf{Draft version \docversion}, compiled on
+  \isodayandtime. \\
+  Part of CRIST_ERA Full Proposal.
+}
+% =============================================================================
+
+\begin{document}
+% \maketitle
+
+\vfill
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
+        \hline
+        Project Title:         & \fulltitle \\\hline
+        Project acronym:       & \project \\\hline
+        Project's keywords:    & \\\hline
+        Duration:  & \\
+        \hline
+    \end{tabular}
+\end{table}
+\clearpage
+% =========================================================
+\section{Objectives of the project}
+% =========================================================
+\label{sec:obj}
+\input{1_objectives}
+
+
+% ================================================================================================
+\section{State of the art and expected progress beyond state of the art}
+% ================================================================================================
+\label{sec:state-art}
+\input{2_sota}
+
+% =============================================================
+\section{Scientific description of the project}
+% =============================================================
+\label{sec:desc}
+\input{3_scientific_desc}
+
+% =========================================================
+\section{Work packages, milestones, and work plan}
+% =========================================================
+
+% ------------------------------------
+\subsection{Work plan (including Project Management/ Project Structure)}
+\input{4_1_work_plan}
+
+% ----------------------------------------------------------------------------
+\subsection{Work Packages (WP) and tasks (800 words / WP)}
+\input{WP_template}
+% \input{WP1}
+% \input{WP2}
+% \input{WP3}
+% \input{WP4}
+% \input{WP5}
+% \input{WP6}
+
+
+\textbf{WP Matrix}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c||c|c|c|c|c|c|}
+        \hline
+        \rowcolor{lightgray}
+        \textbf{Partner} & \textbf{WP1} & \textbf{WP2} & \textbf{WP3} & \textbf{WP4} & \textbf{WP5} & \textbf{TOTAL}\\\hline
+        \hline
+        \textbf{1}     & & & & & & \\\hline
+        \textbf{2}     & & & & & & \\\hline
+        \textbf{3}     & & & & & & \\\hline
+        \textbf{4}     & & & & & & \\\hline
+        \textbf{5}     & & & & & & \\\hline
+        \rowcolor{lightgray}
+        \textbf{TOTAL} & & & & & & \\\hline
+    \end{tabular}
+\end{table}
+
+% ----------------------------------------------------------------------------
+\subsection{Milestones}
+\label{sub:milestones}
+
+\textbf{NOTE:} \emph{A milestone is a major and visible achievement in the
+  project. It should be SMART (Specific, Measurable, Attainable, Relevant,
+  Time-bound}.  
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c||c|c|p{0.5\textwidth}|}
+        \hline
+        \rowcolor{lightgray}
+        \textbf{Milestone} & \textbf{Delivery} & \textbf{WP} & \textbf{Title}\\\hline
+        \hline
+        \textbf{M1}     & & &  \\\hline
+        \textbf{M2}     & & &  \\\hline
+        \textbf{M3}     & & &  \\\hline
+    \end{tabular}
+\end{table}
+
+% =========================================================
+\section{Description of the Consortium}
+% =========================================================
+\label{sec:consortium}
+
+\input{Partner_template}
+%\input{Partner_UL}
+%\input{Partner_INRIA}
+
+% ====================================================================================
+\section{Added value of the proposed collaboration, including multidisciplinarity and European dimension}  
+% ====================================================================================
+\label{sec:added-value}
+\input{6_added_value}
+
+
+% ===========================================================================================================
+\section{Description of significant facilities and large equipment available to the consortium to perform the project} 
+% ===========================================================================================================
+\label{sec:equipment}
+\input{7_equipment}
+
+% ===========================================================================================================
+\section{Consortium agreement principles (partner's rights and duties, IPR management}
+% ===========================================================================================================
+\label{sec:ipr}
+\input{8_ipr}
+
+
+% =======================================================
+\section{Link with ongoing projects}
+% =======================================================
+\label{sec:link-with-projects}
+\input{9_link_with_project}
+
+% ===========================================================================================================
+\section{Scientific Impact, dissemination and potential exploitation}
+% ===========================================================================================================
+\label{sec:scientific-impact}
+\input{10_scientific_impact}
+
+% =======================================================
+\section{Ethical issues}
+% =======================================================
+\label{sec:ethical-issues}
+\input{11_ethical_issues}
+
+% =======================================================
+\section{Financial plan}
+% =======================================================
+\label{sec:financial-plan}
+\input{12_financial_plan}
+
+
+
+% ======================================================================
+\section{References}
+
+\emph{max 40 references}
+
+\end{document}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% eof
+% 
+% Local Variables:
+% mode: latex
+% mode: flyspell
+% mode: auto-fill
+% fill-column: 80
+% End:
