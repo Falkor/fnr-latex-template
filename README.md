@@ -2,7 +2,7 @@
 
 Copyright (c) 2014 [Sebastien Varrette](mailto:<Sebastien.Varrette@uni.lu>) [www](http://varrette.gforge.uni.lu)
 
-        Time-stamp: <Jeu 2014-02-06 11:23 svarrette>
+        Time-stamp: <Jeu 2014-02-06 11:32 svarrette>
 
 -------------------
 # AFR Project Proposals -- LaTeX Template
@@ -110,6 +110,12 @@ Then, to make the release effective, just run:
 it will finish the release using `git-flow`, create the appropriate tag in the `  production` branch and merge all things the way they should be.
 
 # Contributing
+
+This project is released under the terms of the
+[GNU GPLv3](https://www.gnu.org/licenses/gpl.html) licence -- see the
+[LICENCE](https://github.com/Falkor/fnr-latex-template/blob/master/LICENSE)
+file.
+
 
 Help me to complete the (missing) LaTeX templates by Forking this repository,
 complete it (if possible under the same model) and pulling requests. 
