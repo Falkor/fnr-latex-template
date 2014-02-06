@@ -1,60 +1,94 @@
--*- mode: markdown; mode: auto-fill; fill-column: 80 -*-
-`README.txt`
+` README.md `
+Copyright (c) 2014 [Sebastien Varrette](mailto:<Sebastien.Varrette@uni.lu>) [www](http://varrette.gforge.uni.lu)
 
-Copyright (c) 2013 [Sebastien Varrette](mailto:<Sebastien.Varrette@uni.lu>) [www](http://varrette.gforge.uni.lu)
+        Time-stamp: <>
 
-        Time-stamp: <Mer 2013-08-21 14:32 svarrette>
+-------------------
+# fnr-latex-template
 
---------------------
-# afr-latex-template
+## Synopsis
 
-LaTeX-based templates for submission of project/AFR proposal to the [FNR](http://www.fnr.lu/) (Fond
-National de Recherche Luxembourg)  
+## Local repository setup
 
-# Pre-requisites
+This repository is hosted on out [GitHub]().
+Once cloned, initiate the potential git submodules etc. by running:
 
-## Git
+    $> cd fnr-latex-template
+    $> make setup
 
-You should become familiar (if not yet) with Git. Consider these resources:
+## Pre-requisites
+
+### Git
+
+You should become familiar (if not yet) with [Git](http://git-scm.com/).
+Consider these resources:
 
 * [Git book](http://book.git-scm.com/index.html)
 * [Github:help](http://help.github.com/mac-set-up-git/)
 * [Git reference](http://gitref.org/)
 
-Remember to correctly initialize git with your name and email as follows: 
+At least, you shall configure the following exported variables within your favorite shell (adapt accordingly):
 
-      $> git config --global user.name "Firstname Name"
-      $> git config --global user.email Firstname.Name@uni.lu
+    # Bash configuration
+    # Set your git user info
+    export GIT_AUTHOR_NAME='<firstname> <name>'
+    export GIT_AUTHOR_EMAIL='<email>'
+    export GIT_COMMITTER_NAME="${GIT_AUTHOR_NAME}"
+    export GIT_COMMITTER_EMAIL="${GIT_AUTHOR_EMAIL}"
 
+You can also use the following commands:
+
+    $> git config --global user.name "Your Name Comes Here"
+    $> git config --global user.email you@yourdomain.example.com
+    # configure colors
+    $> git config --global color.diff auto
+    $> git config --global color.status auto
+    $> git config --global color.branch auto
 
 ### git-flow
 
-The Git branching model for this repository follows the guidelines of [gitflow](http://nvie.com/posts/a-successful-git-branching-model/).
-In particular, the central repo (on `gforge.uni.lu`) holds two main branches with an infinite lifetime:
+The Git branching model for this repository follows the guidelines of
+[gitflow](http://nvie.com/posts/a-successful-git-branching-model/).
+In particular, the central repository holds two main branches with an infinite lifetime:
 
-* `production`: the *production-ready* slides, with a tag for each version used
-* `master`: the main branch where the slides are in a state with the latest delivered development changes for the next release. This is the *default* branch you get when you clone the repo, and the one on which developments will take places.
+* `  production`: the *production-ready* branch
+* `master`: the main branch where the latest developments interviene. This is
+  the *default* branch you get when you clone the repo
 
-You should therefore install [git-flow](https://github.com/nvie/gitflow), and probably also its associated [bash completion](https://github.com/bobthecow/git-flow-completion).
+# Advanced information
 
-We will see below that we make also use of an interesting wrapper to `git` to
-facilitate the tracking of remote branches (namely
-[grb](https://github.com/webmat/git_remote_branch)). 
+## Releasing mechanism
 
-To initialize completely your local copy of this repo (assuming your SSH key is
-correctly configured on the Gforge): 
+The operation consisting of releasing a new version of this repository is automated by a set of tasks within the `Makefile`.
 
-      $> git clone  https://github.com/Falkor/fnr-latex-template.git
-      $> cd fnr-latex-template
-      $> make setup
+In this context, a version number have the following format:
 
-# AFR Postdoc proposal
+      <major>.<minor>.<patch>-b<build>
 
-The full AFR Postdoc proposal is available under `AFR/Postdoc/`
+where:
 
+* `< major >` corresponds to the major version number
+* `< minor >` corresponds to the minor version number
+* `< patch >` corresponds to the patching version number
+* `< build >` states the build number _i.e._ the total number of commits within the `master` branch.
 
-# Contributing
+Example: `1.0.0-b28`
 
-Help me to complete the (missing) LaTeX templates by Forking this repository,
-complete it (if possible under the same model) and pulling requests. 
+The current version number is stored in the file `VERSION`. __/!\ NEVER MAKE ANY MANUAL CHANGES TO THIS FILE__
+
+For more information on the version, run:
+
+     $> make versioninfo
+
+If a new  version number such be bumped, you simply have to run:
+
+      $> make start_bump_{major,minor,patch}
+
+This will start the release process for you using `git-flow`.
+Probably after that, the first things to do is to change within the main LaTeX document the version number and commit this change.
+Then, to make the release effective, just run:
+
+      $> make release
+
+it will finish the release using `git-flow`, create the appropriate tag in the `  production` branch and merge all things the way they should be.
 
