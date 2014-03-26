@@ -15,18 +15,8 @@
 % =============================================================================
 
 \documentclass[11pt,twoside,a4paper]{article}
-\input{_style.sty}
-
-% Macro to facilitate attachment management
-\usepackage{pdfpages}
-\newcommand{\Attachment}[1]{
-  \IfFileExists {#1}{\includepdf[pages={-}]{#1}}
-}
-
-% Define the project acronym / full title here
-\newcommand{\project}{\textsc{MyProject}\xspace}
-\newcommand{\fulltitle}{\textbf{M}y \textbf{L}ong \textsc{P}roject \textbf{T}itle\xspace}
-\newcommand{\keywords}{keyword1, keyword2\xspace}
+\usepackage{_style}
+\usepackage{__config}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
