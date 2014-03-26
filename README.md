@@ -24,8 +24,7 @@ Up to now, you'll find here LaTeX templates for the following calls:
 * [AFR PhD](http://www.fnr.lu/en/AFR-PhD-Postdoc-Grants/PhD-Grants) -- see `AFR/PhD/`
 * [AFR PostDoc](http://www.fnr.lu/en/AFR-PhD-Postdoc-Grants/Postdoc-Grants) --
   see `AFR/Postdoc/`
-*
-  [FNR CORE](http://www.fnr.lu/en/Research-Programmes/Research-Programmes/CORE-Programme)
+* [FNR CORE](http://www.fnr.lu/en/Research-Programmes/Research-Programmes/CORE-Programme)
   -- see `CORE/`  
 * [FNR Inter](http://www.fnr.lu/en/Research-Programmes/Research-Programmes/INTER-Programme),
   Promotion of International Collaboration, in particular for the [CHIST-ERA](http://www.fnr.lu/en/Research-Programmes/Research-Programmes/Calls/CHIST-ERA-Call-2013) European call -- see `INTER/CRIST-ERA`
