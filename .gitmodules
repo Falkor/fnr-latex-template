@@ -1,3 +1,6 @@
 [submodule ".submodules/falkor-makefile"]
 	path = .submodules/falkor-makefile
 	url = https://github.com/Falkor/Makefiles
+[submodule ".submodules/falkor-cv"]
+	path = .submodules/falkor-cv
+	url = https://github.com/Falkor/cv.git
