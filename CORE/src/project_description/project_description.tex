@@ -1,7 +1,7 @@
 % ==============================================================================
 % File:  project_description.tex --  FNR CORE Call
 % Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
-% Time-stamp: <Mer 2014-03-26 17:33 svarrette>
+% Time-stamp: <Mer 2014-03-26 23:43 svarrette>
 % 
 % Copyright (c) 2014 Sebastien Varrette <Sebastien.Varrette@uni.lu>
 % .                  http://varrette.gforge.uni.lu
@@ -31,7 +31,6 @@
 \begin{document}
 \maketitle
 
-\vfill
 \begin{table}[H]
     \centering
     \begin{tabular}{|c||p{0.5\textwidth}|}
@@ -41,37 +40,42 @@
         \textbf{Host Institution} & \ac{UL}   \\\hline
     \end{tabular}
 \end{table}
+\vfill
 \clearpage
 
 
-\clearpage
+% =========================================================================
+\section{Description of the Proposed Research Project.}
+% =========================================================================
+\emph{(max. 7 pages for 1.1. - 1.4.)}
 
-% =========================================================
-\section{Objectives of the project}
-% =========================================================
-\label{sec:obj}
-\input{1_objectives}
+%-----------------------------
+\subsection{Introduction}
+\input{_intro}
+
+%------------------------------------------------------------------------------------
+\subsection{Relevant state-of-the art \& your own contribution to it}
+\input{_sota}
 
 
-% ================================================================================================
-\section{State of the art and expected progress beyond state of the art}
-% ================================================================================================
-\label{sec:state-art}
-\input{2_sota}
+%-------------------------------------------------------------------------------------------
+\subsection{Hypotheses, project objectives and contribution to know\-ledge
+  development in the research field}
+\input{_research_obj}
 
-% =============================================================
-\section{Scientific description of the project}
-% =============================================================
-\label{sec:desc}
-\input{3_scientific_desc}
+%--------------------------------------
+\subsection{Methods and approach}
+\label{sec:3_3_methods_approach}
+\input{_methodology}
 
-% =========================================================
-\section{Work packages, milestones, and work plan}
-% =========================================================
+% =========================================================================
+\section{Project plan {\small \emph{(3 to 10 pages)}}}
+% =========================================================================
 
-% ------------------------------------
-\subsection{Work plan (including Project Management/ Project Structure)}
-\input{4_1_work_plan}
+% ----------------------------------------------------------------------------------
+\subsection{Work plan {\small (including Project Management/ Project
+    Structure)}} 
+\input{_project_plan}
 
 % ----------------------------------------------------------------------------
 \subsection{Work Packages (WP) and tasks (800 words / WP)}
@@ -83,25 +87,24 @@
 % \input{WP5}
 % \input{WP6}
 
+% \textbf{WP Matrix}
 
-\textbf{WP Matrix}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c||c|c|c|c|c|c|}
-        \hline
-        \rowcolor{lightgray}
-        \textbf{Partner} & \textbf{WP1} & \textbf{WP2} & \textbf{WP3} & \textbf{WP4} & \textbf{WP5} & \textbf{TOTAL}\\\hline
-        \hline
-        \textbf{1}     & & & & & & \\\hline
-        \textbf{2}     & & & & & & \\\hline
-        \textbf{3}     & & & & & & \\\hline
-        \textbf{4}     & & & & & & \\\hline
-        \textbf{5}     & & & & & & \\\hline
-        \rowcolor{lightgray}
-        \textbf{TOTAL} & & & & & & \\\hline
-    \end{tabular}
-\end{table}
+% \begin{table}[H]
+%     \centering
+%     \begin{tabular}{|c||c|c|c|c|c|c|}
+%         \hline
+%         \rowcolor{lightgray}
+%         \textbf{Partner} & \textbf{WP1} & \textbf{WP2} & \textbf{WP3} & \textbf{WP4} & \textbf{WP5} & \textbf{TOTAL}\\\hline
+%         \hline
+%         \textbf{1}     & & & & & & \\\hline
+%         \textbf{2}     & & & & & & \\\hline
+%         \textbf{3}     & & & & & & \\\hline
+%         \textbf{4}     & & & & & & \\\hline
+%         \textbf{5}     & & & & & & \\\hline
+%         \rowcolor{lightgray}
+%         \textbf{TOTAL} & & & & & & \\\hline
+%     \end{tabular}
+% \end{table}
 
 % ----------------------------------------------------------------------------
 \subsection{Milestones}
@@ -124,65 +127,53 @@
     \end{tabular}
 \end{table}
 
-% =========================================================
-\section{Description of the Consortium}
-% =========================================================
-\label{sec:consortium}
+
+% =========================================================================
+\section{Project Outputs}
+% =========================================================================
+
+% ----------------------------------------------------------------------------
+\subsection{Impact of research results}
+\input{_scientific_impact}
+
+% ----------------------------------------------------------------------------
+\subsection{PhD student supervision and research lines}
+\input{_phd_supervision}
+
+% ----------------------------------------------------------------------------
+\subsection{{\small In addition, for CORE Junior Track:}\newline
+  Advancement of the Junior PI's research career}
+\input{_junior_track}
+
+% ===========================================================
+\section{Project Participants and Management}
+% ===========================================================
+
+% ----------------------------------------------------------------------------
+\subsection{Description of the consortium, communication and decision-making
+  {\small \emph{(max 1 page)}}}
 
 \input{Partner_template}
 %\input{Partner_UL}
 %\input{Partner_INRIA}
 
-% ====================================================================================
-\section{Added value of the proposed collaboration, including multidisciplinarity and European dimension}  
-% ====================================================================================
-\label{sec:added-value}
-\input{6_added_value}
+\input{_communication_decision_making}
 
+% ----------------------------------------------------------------------------
+\subsection{Summaries (Term sheets) of the Consortium agreement and/or IPR
+  agreement {\small \emph{(max 1 page)}}}
+\input{_IPR}
 
-% ===========================================================================================================
-\section{Description of significant facilities and large equipment available to the consortium to perform the project} 
-% ===========================================================================================================
-\label{sec:equipment}
-\input{7_equipment}
-
-% ===========================================================================================================
-\section{Consortium agreement principles (partner's rights and duties, IPR management}
-% ===========================================================================================================
-\label{sec:ipr}
-\input{8_ipr}
-
-
-% =======================================================
-\section{Link with ongoing projects}
-% =======================================================
-\label{sec:link-with-projects}
-\input{9_link_with_project}
-
-% ===========================================================================================================
-\section{Scientific Impact, dissemination and potential exploitation}
-% ===========================================================================================================
-\label{sec:scientific-impact}
-\input{10_scientific_impact}
-
-% =======================================================
-\section{Ethical issues}
-% =======================================================
-\label{sec:ethical-issues}
-\input{11_ethical_issues}
-
-% =======================================================
-\section{Financial plan}
-% =======================================================
-\label{sec:financial-plan}
-\input{12_financial_plan}
-
+% ===========================================
+\section{Comments on Resubmission}
+\emph{ (only if applicable, max. 1 page)}
 
 
 % ======================================================================
-\section{References}
+\section{Bibliography / References {\small \emph{(max. 3 pages)}}}
+\bibliography{biblio} 
 
-\emph{max 40 references}
+
 
 \input{_acronyms}
 
