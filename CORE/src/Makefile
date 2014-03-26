@@ -1,1 +1,1 @@
-../../../.submodules/falkor-makefile/latex/Makefile
+../../.submodules/falkor-makefile/latex/Makefile

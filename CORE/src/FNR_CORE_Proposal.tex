@@ -17,15 +17,23 @@
 \documentclass[11pt,twoside,a4paper]{article}
 \input{_style.sty}
 
-%%%%%%%%%% Define the project acronym in _style.sty %%%%%%%%
+% Macro to facilitate attachment management
+\usepackage{pdfpages}
+\newcommand{\Attachment}[1]{
+  \IfFileExists {#1}{\includepdf[pages={-}]{#1}}
+}
 
+% Define the project acronym / full title here
+\newcommand{\project}{\textsc{MyProject}\xspace}
+\newcommand{\fulltitle}{\textbf{M}y \textbf{L}ong \textsc{P}roject \textbf{T}itle\xspace}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\title{\textbf{\Large FNR INTER Proposal for the CRIST-ERA Call} \\[1em]
+\title{\textbf{\Large FNR CORE Proposal Call} \\[1em]
   {\small Full Proposal Application Form \LaTeX\ template\thanks{by Sebastien
-      Varrette {\small \texttt{<Sebastien.Varrette@uni.lu>}}}.\\
+      Varrette {\small \texttt{<Sebastien.Varrette@uni.lu>}} -- checkout sources
+      on \href{https://github.com/Falkor/fnr-latex-template}{GitHub}}.\\
     \textbf{Draft version \docversion}, compiled on \isodayandtime}
 }
 \author{}

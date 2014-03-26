@@ -1,7 +1,7 @@
 %=============================================================================
 % File:  _style.sty --  LaTeX style configuration for the document 
 % Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
-% Time-stamp: <Jeu 2014-01-16 16:31 svarrette>
+% Time-stamp: <Mer 2014-03-26 10:56 svarrette>
 %
 % Copyright (c) 2010 Sebastien Varrette <Sebastien.Varrette@uni.lu>
 %               http://varrette.gforge.uni.lu
@@ -30,15 +30,15 @@
 %\usepackage{textcomp}
 \usepackage{multirow}
 \usepackage{rotating}
-%\usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true]{hyperref}
 \usepackage{xspace}
 \usepackage{wasysym} % for smiley 
 
 %\usepackage{background}
-\usepackage[nolist]{acronym}          % for acronyms
+\usepackage[nolist]{acronym}  % for acronyms - options: [printonlyused,withpage]
 %\usepackage{dsfont}
 
-\usepackage[official]{eurosym} % Euro symbol
+\usepackage[official]{eurosym} % Euro symbol via \euro{}
 
 \usepackage{floatflt}
 %\usepackage[usenames]{color} % see http://en.wikibooks.org/wiki/LaTeX/Colors
@@ -84,8 +84,8 @@
 \usepackage{algorithm}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Versionning with day and time
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Versionning with day and time using \isodayandtime
 %%%%%%%%%%%%%%
 % months
 \def\ftoday{\number\day\space
@@ -102,6 +102,14 @@
 \2{\count2}}
 \endgroup
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Versionning from VERSION file via \docversion
+%%%%%%%%%%%%%%
+\IfFileExists{VERSION}{
+  \def\docversion{\input{VERSION}}
+}{
+  \def\docversion{0.1}
+}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -123,7 +131,6 @@
 \newcommand{\R}   {\mathbb{R}}
 \newcommand{\K}   {\mathbb{K}}
 
-\usepackage{pdfpages}
 
 \newcommand{\prettyfunction}{{\small \texttt{\_\_PRETTY\_FUNCTION\_\_}}\xspace}
 
@@ -150,24 +157,6 @@
 \newcommand{\vsfig} {\vspace{-1em}}
 \newcommand{\vssec} {\vspace{0em}}
 
-
-% Current version of the proposal
-\IfFileExists{VERSION}{
-  \def\docversion{\input{VERSION}}
-}{
-  \def\docversion{0.2}
-}
-
-% Macro to facilitate attachment management
-\newcommand{\Attachment}[1]{
-  \IfFileExists {#1}{\includepdf[pages={-}]{#1}}
-}
-
-
-
-% Define the project acronym / full title here
-\newcommand{\project}{\textsc{MyProject}\xspace}
-\newcommand{\fulltitle}{\textbf{M}y \textbf{L}ong \textsc{P}roject \textbf{T}itle\xspace}
 
 
 
