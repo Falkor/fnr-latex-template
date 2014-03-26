@@ -1,0 +1,130 @@
+% =============================================================================
+% File: FNR_CORE_Proposal.tex -- Main LaTeX document for the project proposal
+% Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% 
+% Copyright (c) 2014 Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% .             http://varrette.gforge.uni.lu
+% 
+% More information on LaTeX: http://www.latex-project.org/
+% LaTeX symbol list:
+% http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf
+%
+% FNR CORE programe:
+%   <http://www.fnr.lu/en/Research-Programmes/Research-Programmes/CORE-Programme>
+%
+% =============================================================================
+
+\documentclass[11pt,twoside,a4paper]{article}
+\input{_style.sty}
+
+%%%%%%%%%% Define the project acronym in _style.sty %%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\title{\textbf{\Large FNR INTER Proposal for the CRIST-ERA Call} \\[1em]
+  {\small Full Proposal Application Form \LaTeX\ template\thanks{by Sebastien
+      Varrette {\small \texttt{<Sebastien.Varrette@uni.lu>}}}.\\
+    \textbf{Draft version \docversion}, compiled on \isodayandtime}
+}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+{\Large
+  \begin{center}
+      \hrule
+      ~\\
+      \emph{Project Acronym}: \project
+
+      \emph{Project Full Title}: \fulltitle\\[1em]
+  \end{center}
+}
+\hrule
+~\\[2em]
+\textbf{Addressed Call Topic (AMCE\footnote{Adaptive Machines in Complex Environments}  or HDC\footnote{Heterogeneous Distributed Computing} )}: \fbox{HDC}
+
+\emph{Coordinator contact point for the proposal}:
+
+\begin{table}[H]
+    \centering\small
+    \begin{tabular}{|p{0.48\textwidth}|p{0.5\textwidth}|}
+        \hline
+        Name:                   & \\\hline
+        Institution/Department: & \\\hline
+        Address:                & \\\hline
+        Country:                & \\\hline
+        Phone:                  & \\\hline
+        Fax:                    & \\\hline
+        E-mail:                 & \\\hline
+        \hline
+    \end{tabular}
+\end{table}
+
+\emph{Partners' people involved in the realisation of the project }
+
+\begin{table}[H]
+    \centering\small
+    \begin{tabular}{|c|c|p{0.4\textwidth}|p{0.2\textwidth}|p{0.15\textwidth}|}
+        \hline
+        \rowcolor{lightgray}
+        \textbf{\#} & \textbf{Country} & \textbf{Institution} & \textbf{PI} & \textbf{Nat. Funding?}\\\hline
+        \hline 
+        \textbf{1}  & & & &\\\hline
+        \textbf{2}  & Luxembourg & \acf{UL} & Pascal Bouvry & Y \\\hline
+        \textbf{3}  & & & &\\\hline
+        \textbf{4}  & & & &\\\hline
+        \textbf{5}  & & & &\\\hline
+        \textbf{6}  & & & &\\\hline
+        \hline
+    \end{tabular}
+\end{table}
+\textbf{Note}:
+
+\emph{For each partner, precise Name of the co-Investigators, the name of the
+  other personnel participating in the project.} 
+
+%\clearpage
+~\\[2em]
+\textbf{Duration}: \fbox{36 Months}
+
+\textbf{Summary of the project\footnote{Be precise and concise. This summary will be used to select suited reviewers for the proposal.}:} \emph{(publishable abstract, max. 400 words):}
+\input{_project_abstract}
+
+\textbf{Relevance to the topic addressed in the call\footnote{Be precise and concise. Relevance to the topic addressed in the call is an essential eligibility criterion.}:} \emph{(max. 200 words):}
+\input{_project_abstract}
+
+% --------------------------------------------------------------
+\section{Detailed project information}
+
+\textbf{General recommendation}:
+\begin{enumerate}
+  \item The same font and style should be used for the whole proposal (Arial,
+    11pt, single spaced).
+  \item Please complete all sections
+  \item Please adhere to the given word limits.
+  \item For the evaluation criteria, please refer to the call announcement. Your
+    proposal should include all details required. 
+\end{enumerate}
+
+\Attachment{project_description/project_description.pdf}
+
+
+
+\input{_acronyms}
+
+
+\end{document}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% eof
+% 
+% Local Variables:
+% mode: latex
+% mode: flyspell
+% mode: auto-fill
+% fill-column: 80
+% End:
