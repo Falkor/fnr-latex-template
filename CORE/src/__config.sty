@@ -1,0 +1,31 @@
+%=============================================================================
+% File:  __config.sty --  LaTeX style configuration for the document 
+% Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% Creation:  26 Mar 2014
+% Time-stamp: <Mer 2014-03-26 17:28 svarrette>
+%
+% Copyright (c) 2014 Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% .              http://varrette.gforge.uni.lu
+%=============================================================================
+
+% Macro to facilitate attachment management
+\usepackage{pdfpages}
+\newcommand{\Attachment}[1]{
+  \IfFileExists {#1}{\includepdf[pages={-}]{#1}}
+}
+
+% Define the project acronym / full title here
+\newcommand{\projectPI}{\textsc{Firstname Name}\xspace}
+\newcommand{\project}{\textsc{MyProject}\xspace}
+\newcommand{\fulltitle}{\textbf{M}y \textbf{L}ong \textsc{P}roject \textbf{T}itle\xspace}
+\newcommand{\keywords}{keyword1, keyword2\xspace}
+
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% eof
+%
+% Local Variables:
+% mode: latex
+% mode: flyspell
+% End:

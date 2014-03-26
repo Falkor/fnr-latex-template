@@ -1,0 +1,85 @@
+% =============================================================================
+% File:  _project_plan.tex --
+% 
+% Time-stamp: <Mer 2014-03-26 22:59 svarrette>
+% =============================================================================
+
+\emph{Explanation:
+  Please indicate roughly the different \textbf{stages of activities} (i.e. work
+  packages, milestones) with the corresponding timetable (when?), location
+  (where?) and collaborating research groups (with whom?), preferably in
+  spreadsheet format. A provisional date for thesis submission and/or final
+  thesis examination should be indicated. 	
+  The work plan must typically be limited to finalise the PhD within a period of
+  3 years. Exceptions can be made for applicants who participate in an official
+  PhD programme that is initially planned over a period of 4 years (for example
+  PhD schools). 
+}
+
+As mentioned in the section~\ref{sec:3_3_methods_approach}, the \project\ project is divided into
+XX work packages:
+\begin{enumerate}
+  \item Project/Configuration Management and Quality Control
+  \item ...
+  \item Validation on a concrete case studies.
+  \item Dissemination of the results
+\end{enumerate}
+
+\noindent
+The tasks in the different work packages are designed to be iterative and at a
+given level, most of them can be done in parallel.
+\\
+WP1 and WP6 are classical management tasks.\\
+WP2, WP3, WP4 will constitute the main advances in terms of scientific contributions.
+WP5.
+The rest of this section details the work packages mentioned above.
+
+
+
+
+Example of Gantt Chart using \texttt{gantt.sty}\footnote{Credits: Benoit
+  Bertholon \url{Benoit.Bertholon@uni.lu}.}
+
+\begin{figure}[H]
+    \hspace{-5em}
+    \begin{gantt}{7}{12}
+        \begin{ganttitle}
+            \titleelement{Jan}{1}
+            \titleelement{Feb}{1}
+            \titleelement{Mar}{1}
+            \titleelement{Apr}{1}
+            \titleelement{May}{1}
+            \titleelement{Jun}{1}
+            \titleelement{Jul}{1}
+            \titleelement{Aug}{1}
+            \titleelement{Sep}{1}
+            \titleelement{Oct}{1}
+            \titleelement{Nov}{1}
+            \titleelement{Dec}{1}
+        \end{ganttitle}
+        \ganttbar{implementation, xp}{0}{7}
+        \ganttbar{article writing}{0}{8}
+        \ganttbar{conference}{3}{3}
+
+        % \ganttbarcon{a consecutive task}{2}{4}
+        % \ganttbarcon{another consecutive task}{8}{2}
+        \ganttbar{literature}{6}{6}
+        \ganttbar{design}{7}{5}
+        \ganttbar{implementation}{8}{4}
+    \end{gantt}
+    \caption{Gantt Chart Example over 1 year}
+    \label{fig:timeline}
+
+\end{figure}
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% eof
+% 
+% Local Variables:
+% mode: latex
+% mode: flyspell
+% mode: auto-fill
+% fill-column: 80
+% End:
