@@ -1,0 +1,138 @@
+% =============================================================================
+% File: FNR_CORE_Proposal.tex -- Main LaTeX document for the project proposal
+% Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% 
+% Copyright (c) 2014 Sebastien Varrette <Sebastien.Varrette@uni.lu>
+% .             http://varrette.gforge.uni.lu
+% 
+% More information on LaTeX: http://www.latex-project.org/
+% LaTeX symbol list:
+% http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf
+%
+% FNR CORE programe:
+%   <http://www.fnr.lu/en/Research-Programmes/Research-Programmes/CORE-Programme>
+%
+% =============================================================================
+
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage{_style}
+\usepackage{__config}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\title{\textbf{\Large FNR CORE Proposal Call} \\[1em]
+  {\small Full Proposal Application Form \LaTeX\ template\thanks{by Sebastien
+      Varrette {\small \texttt{<Sebastien.Varrette@uni.lu>}} -- checkout sources
+      on \href{https://github.com/Falkor/fnr-latex-template}{GitHub}}.\\
+    \textbf{Draft version \docversion}, compiled on \isodayandtime}
+}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+{\Large
+  \begin{center}
+      \hrule
+      ~\\
+      \emph{Project Acronym}: \project
+
+      \emph{Project Full Title}: \fulltitle\\[1em]
+  \end{center}
+}
+\hrule
+~\\[1em]
+
+\clearpage
+\tableofcontents
+\clearpage
+
+%====================================================================================
+\section{Principal Investigator \& Coordinating Institution}
+\input{_1_PI_details}
+
+%====================================================================
+\section{Research Project}
+\input{_2_research_project}
+  
+%==============================================================================
+\section{Research Project Consortium and Human Resources}
+\input{_3_consortium}
+  
+%==============================================================================
+\section{Legal and Ethical Requirements}
+\input{_4_legal_requirements}
+
+%==============================================================================
+\section{Financial Part}
+\input{_5_financial_part}
+
+%================================================================
+\section{Attachments (Supporting Documentation)}
+%================================================================
+
+%--------------------------------------------------------------
+\subsection{Project Description}
+\emph{run \texttt{make rtf} in the \texttt{project\_description/} directory at
+  the last moment to export an RTF version of the \LaTeX\ document to facilitate the copy within
+  the official \texttt{CORE\ 2014\ Project\ Description\ Form.doc} Word
+  document. }
+
+\Attachment{project_description/project_description.pdf}
+
+% --------------------------------------------------------------
+\subsection{CV of the PI}
+\emph{max. 3 pages/CV in one PDF File)}
+
+% Adapt accordingly....
+\Attachment {CVs/cv-PI.pdf}
+
+
+% --------------------------------------------------------------
+\subsection{CVs of other main researchers}
+\emph{ (max. 2 pages/CV in one PDF File)}
+
+% Adapt accordingly....
+%\Attachment {CVs/cv1.pdf}
+%\Attachment {CVs/cv2.pdf}
+%\Attachment {CVs/cv3.pdf}
+% etc....
+
+% --------------------------------------------------------------
+\subsection{Project Plan}
+\emph{Use PDF exported version of \texttt{CORE\ 2014\ Project\ Plan.xls}}
+
+% --------------------------------------------------------------
+\subsection{International Co-Funding (if applicable}
+\emph{Complete the relevant forms, merge them into one single PDF and upload it}
+
+
+%--------------------------------------------------------------
+\subsection{Declaration}
+
+
+I hereby declare that this proposal conforms to the call guidelines and the 'FNR
+Research Integrity Guidelines'.
+\\
+
+\noindent 
+\textbf{Important:} review the check list in \textbf{official\_forms/}
+
+
+
+\input{_acronyms}
+
+
+\end{document}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% eof
+% 
+% Local Variables:
+% mode: latex
+% mode: flyspell
+% mode: auto-fill
+% fill-column: 80
+% End:
