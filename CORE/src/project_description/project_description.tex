@@ -1,7 +1,7 @@
 % ==============================================================================
 % File:  project_description.tex --  FNR CORE Call
 % Author(s): Sebastien Varrette <Sebastien.Varrette@uni.lu>
-% Time-stamp: <Mer 2014-03-26 17:06 svarrette>
+% Time-stamp: <Mer 2014-03-26 17:33 svarrette>
 % 
 % Copyright (c) 2014 Sebastien Varrette <Sebastien.Varrette@uni.lu>
 % .                  http://varrette.gforge.uni.lu
@@ -29,21 +29,23 @@
 % =============================================================================
 
 \begin{document}
-% \maketitle
+\maketitle
 
 \vfill
 \begin{table}[H]
     \centering
-    \begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
+    \begin{tabular}{|c||p{0.5\textwidth}|}
         \hline
-        Project Acronym:         & \fulltitle \\\hline
-        \acf{PI}       & \project \\\hline
-        Project's keywords:    & \\\hline
-        Duration:  & \\
-        \hline
+        \textbf{Project Acronym}  & \project   \\\hline
+        \textbf{\ac{PI}}         & \projectPI \\\hline
+        \textbf{Host Institution} & \ac{UL}   \\\hline
     \end{tabular}
 \end{table}
 \clearpage
+
+
+\clearpage
+
 % =========================================================
 \section{Objectives of the project}
 % =========================================================
@@ -181,6 +183,8 @@
 \section{References}
 
 \emph{max 40 references}
+
+\input{_acronyms}
 
 \end{document}
 
