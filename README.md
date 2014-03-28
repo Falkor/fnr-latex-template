@@ -77,6 +77,62 @@ In particular, the central repository holds two main branches with an infinite l
 * `master`: the main branch where the latest developments interviene. This is
   the *default* branch you get when you clone the repo
 
+
+## Bootstrapping your own FNR Proposal
+
+Assuming the above pre-requisites are satisfied: 
+
+* Clone and configure [my Makefile repository](https://github.com/Falkor/Makefiles):
+		
+		$> mkdir -p ~/git/github ~/bin
+		$> cd ~/git/github
+		$> git clone https://github.com/Falkor/Makefiles.git
+		$> cd Makefiles
+		$> make setup
+  		
+* assuming `~/bin` is part or your `PATH`, create a symbolique link to my bootstrapping script `init_gitrepo` as follows: 
+
+		$> ln -s ~/git/github/Makefiles/scripts/init_gitrepo ~/bin/init_gitrepo
+
+* prepare a Git repository to host your project proposal
+  * either create a new [private] project on [Gforge](http://gforge.uni.lu) and clone the (empty) reporsitory
+  * OR create an empty directory to host your proposal 
+  
+  In all case, we assume in the example below that you will work within the directory `/path/to/myproject` (adapt accordingly)
+
+* initialize the directory using my bootstrapping script as follows (you're advised to use `production` as production release branch, and dedicate `master` as "next release" development):
+
+	    $> cd /path/to/myproject
+	    $> ~/bin/init_gitrepo --fnr
+	    [...]
+		=> preparing to bootstrap an FNR proposal
+		[WARNING] about to create the directory 'project_proposal'
+		        ... (p) proceed, (c) change the path, (s) skip ? [P|c|s]
+		You can now bootstrap an FNR Project proposal in 'project_proposal' with the following options:
+		   0 : DO NOT bootstrap
+		   1 : AFR Postdoc
+		   2 : AFR PhD
+		   3 : CORE
+		   4 : INTER CHRIST-ERA
+		Your choice (0 | 1 | 2 | 3 | 4) ? 3
+		Switched to a new branch 'feature/CORE'
+		
+		Summary of actions:
+		- A new branch 'feature/CORE' was created, based on 'master'
+		- You are now on branch 'feature/CORE'
+		
+		Now, start committing on your feature. When done, use:
+		
+		     git flow feature finish CORE
+		
+		=> bootstrapping the directory 'project_proposal' using the CORE template
+		[...]
+
+		
+
+
+
+
 # Advanced information
 
 ## Releasing mechanism
